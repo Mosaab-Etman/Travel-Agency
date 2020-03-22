@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Travel Agency</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel='stylesheet' href="CSS/bootstrap.min.css">
+    <link rel='stylesheet' href="CSS/all.min.css">
+    <link rel='stylesheet' href="CSS/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Playball&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href="CSS/Style.css">
+</head>
+    
+<body>
+    
+    <!-- Start of Navbar -->
+    <div class='upperNavbar'>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+              <div>
+                  <i class="fas fa-umbrella-beach logo"></i>
+                  <a class="navbar-brand" href="#">Miami</a>
+              </div>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="Home.html">Home <span class="sr-only">(current)</span></a>
+                    <span class='Bborder'></span>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="About.html">About Us</a>
+                    <span class='Bborder'></span>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Contacts.html" tabindex="-1" aria-disabled="true">Contacts</a>
+                    <span class='Bborder'></span>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Booking.html">Booking</a>
+                    <span class='Bborder'></span>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </div>
+    <!-- End of Navbar -->
+    
+    <!------------------------------------------->
+    
+    <!-- Start of Banner -->
+    <div class='banner'>
+        
+    <!-- First: Carousel -->
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      
+        <div class="carousel-inner carousel-fade">
+        <div class="carousel-item active">
+          <div class='overlay'></div>
+          <div class='text'>
+            <h1>UNIQUE TRAVEL INSIGHTS</h1>
+            <p>Our team is ready to provide you with unique weekly travel insights that include photos, videos, and articles about untravelled tourist paths. We know everything about the places you’ve never been to!</p>
+            <button>Learn More</button>
+          </div>
+          <img src="Images/Beach01.jpg" class="d-block w-100" alt="slider01">
+        </div>
+        <div class="carousel-item">
+          <div class='overlay'></div>
+          <div class='text'>
+            <h1>HUNDREDS OF AMAZING DESTINATIONS</h1>
+            <p>Our team is ready to provide you with unique weekly travel insights that include photos, videos, and articles about untravelled tourist paths. We know everything about the places you’ve never been to!</p>
+            <button>Learn More</button>
+          </div>
+          <img src="Images/Beach03.jpg" class="d-block w-100" alt="slider02">
+        </div>
+        <div class="carousel-item">
+          <div class='overlay'></div>
+          <div class='text'>
+            <h1>THE TRIP OF YOUR DREAM</h1>
+            <p>Our team is ready to provide you with unique weekly travel insights that include photos, videos, and articles about untravelled tourist paths. We know everything about the places you’ve never been to!</p>
+            <button>Learn More</button>
+          </div>
+          <img src="Images/Beach02.jpg" class="d-block w-100" alt="slider03">
+        </div>
+        <div class="carousel-item">
+          <div class='overlay'></div>
+          <div class='text'>
+            <h1>HUNDREDS OF AMAZING DESTINATIONS</h1>
+            <p>Our team is ready to provide you with unique weekly travel insights that include photos, videos, and articles about untravelled tourist paths. We know everything about the places you’ve never been to!</p>
+            <button>Learn More</button>
+          </div>
+          <img src="Images/Beach04.jpg" class="d-block w-100" alt="slider04">
+        </div>
+      </div>
+      
+        <ol class="carousel-indicators indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+      </div>
+    <!-- End Carousel -->
+       
+    <!-- Second: Form -->
+      <form>
+          <h1>Find your tour</h1>
+
+          <label>From</label>
+          <input list='From'>
+            <datalist id='From'>
+                <option>Cairo</option>
+                <option>Paris</option>
+                <option>London</option>
+                <option>New Yourk</option>
+            </datalist>
+
+           <label>To</label>
+           <input list='To'>
+            <datalist id='To'>
+                <option>Cairo</option>
+                <option>Paris</option>
+                <option>London</option>
+                <option>New Yourk</option>
+            </datalist>
+
+          <div>
+            <label>Departe Date</label>
+            <input type='date'>
+          </div>
+
+          <div>
+            <label>Duration</label>
+            <input list='Duration'>
+            <datalist id='Duration'>
+                <option>Any length</option>
+                <option>2 days</option>
+                <option>3 days</option>
+                <option>More than week</option>
+            </datalist>
+          </div>
+
+          <div>
+            <label>Adults</label>
+            <input type='number' min='0'>
+          </div>
+
+          <div>
+            <label>Children</label>
+            <input type='number' min='0'>
+          </div>
+
+          <button>Search flight</button>
+      </form>
+    <!-- End of form -->
+        
+    </div>
+    <!-- End of Banner -->
+
+    <!------------------------------------------->
+    
+    <!-- Start of Tours -->
+    <div class='mainTours'>
+        <div class='container'>
+            <h1>Our Best Tours</h1>
+            
+            <div class='toursGallery row'>
+                <div class='tourCard col-lg-4 col-md-6 col-sm-12'>
+                    <div class='cardContent'>
+                        <img src='Images/London.jpg' alt='tour01'>
+                        <div class='detailsCard'>
+                            <p>Hotel:<span> 4 stars Hotel</span></p>
+                            <p>Transportation:<span> Price included transportaion</span></p>
+                            <p>Children:<span> Free up to 5 years old</span></p>
+                            <button type="button" class="btn btn-warning">Book Now</button>
+                        </div>
+                    </div>
+                    <span>England, London</span>
+                    <span>From $550</span>
+                </div>
+                
+                <div class='tourCard col-lg-4 col-md-6 col-sm-12'>
+                    <div class='cardContent'>
+                        <img src='Images/Paris.jpg' alt='tour02'>
+                        <span class='offer'>- 10%</span>
+                        <div class='detailsCard'>
+                            <p>Hotel:<span> 4 stars Hotel</span></p>
+                            <p>Transportation:<span> Price included transportaion</span></p>
+                            <p>Children:<span> Free up to 5 years old</span></p>
+                            <button type="button" class="btn btn-warning">Book Now</button>
+                        </div>
+                    </div>
+                    <span>France, Paris</span>
+                    <span>From $450</span>
+                </div>
+                
+                <div class='tourCard col-lg-4 col-md-6 col-sm-12'>
+                    <div class='cardContent'>
+                        <img src='Images/Egypt.jpg' alt='tour03'>
+                        <div class='detailsCard'>
+                            <p>Hotel:<span> 4 stars Hotel</span></p>
+                            <p>Transportation:<span> Price included transportaion</span></p>
+                            <p>Children:<span> Free up to 5 years old</span></p>
+                            <button type="button" class="btn btn-warning">Book Now</button>
+                        </div>
+                    </div>
+                    <span>Egypt, Cairo</span>
+                    <span>From $250</span>
+                </div>
+                <div class='tourCard col-lg-4 col-md-6 col-sm-12'>
+                    <div class='cardContent'>
+                        <img src='Images/Sydney.jpg' alt='tour04'>
+                        <div class='detailsCard'>
+                            <p>Hotel:<span> 4 stars Hotel</span></p>
+                            <p>Transportation:<span> Price included transportaion</span></p>
+                            <p>Children:<span> Free up to 5 years old</span></p>
+                            <button type="button" class="btn btn-warning">Book Now</button>
+                        </div>
+                    </div>
+                    <span>Australia, Sydney</span>
+                    <span>From $550</span>
+                </div>
+                
+                <div class='tourCard col-lg-4 col-md-6 col-sm-12'>
+                    <div class='cardContent'>
+                        <img src='Images/Russia.jpg' alt='tour05'>
+                        <div class='detailsCard'>
+                            <p>Hotel:<span> 4 stars Hotel</span></p>
+                            <p>Transportation:<span> Price included transportaion</span></p>
+                            <p>Children:<span> Free up to 5 years old</span></p>
+                            <button type="button" class="btn btn-warning">Book Now</button>
+                        </div>
+                    </div>
+                    <span>Russia, Mosckow</span>
+                    <span>From $400</span>
+                </div>
+                
+                <div class='tourCard col-lg-4 col-md-6 col-sm-12'>
+                    <div class='cardContent'>
+                        <img src='Images/Turkey.jpg' alt='tour06'>
+                        <span class='offer'>- 15%</span>
+                        <div class='detailsCard'>
+                            <p>Hotel:<span> 4 stars Hotel</span></p>
+                            <p>Transportation:<span> Price included transportaion</span></p>
+                            <p>Children:<span> Free up to 5 years old</span></p>
+                            <button type="button" class="btn btn-warning">Book Now</button>
+                        </div>
+                    </div>
+                    <span>Turkey, Istanbul</span>
+                    <span>From $350</span>
+                </div>
+            
+            </div>
+            
+        </div>
+    </div>
+    <!-- End of Tours -->
+    
+    <!------------------------------------------->
+    
+    <!-- Start of Services -->
+    <div class='services'>
+        <div class='container'>
+            <h1>Our Services</h1><hr>
+            <div class='row'>
+                
+                <div class='serviceCard col-md-3 col-sm-5 col-xs-6'>
+                    <i class="fas fa-plane"></i>
+                    <h5>Air Tickets</h5><hr>
+                    <p>At our travel agency, you can book air tickets to any world destination. We also provide online ticket booking via our website in just a couple of steps</p>
+                </div>
+                
+                <div class='serviceCard col-md-3 col-sm-5 col-xs-6'>
+                    <i class="fas fa-ship"></i>
+                    <h5>Voyages & Cruises</h5><hr>
+                    <p>Besides regular tours and excursions, we also offer a variety of cruises & sea voyages for different customers looking for awesome experiences.</p>
+                </div>
+                
+                <div class='serviceCard col-md-3 col-sm-5 col-xs-6'>
+                    <i class="fas fa-hotel"></i>
+                    <h5>Hotel Bookings</h5><hr>
+                    <p>We offer a wide selection of hotel ranging from 5-star ones to small properties located worldwide so that you could book a hotel you like.</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- End of Services -->
+    
+    <!------------------------------------------->
+    
+    <!-- Start of Gallery -->
+    <div class='gallery'>
+        <h1>Our Gallery</h1>
+        <div class='mainPic'>
+            <img src='Images/Gallery01.jpg'>
+            <i class="fas fa-caret-right"></i>
+            <i class="fas fa-caret-left"></i>
+        </div>
+        
+        <div class='thumbnails'>
+            <img src='Images/Gallery01.jpg' alt='pic01' class='active'>
+            <img src='Images/Gallery02.jpg' alt='pic02'>
+            <img src='Images/Gallery03.jpg' alt='pic03'>
+            <img src='Images/Gallery04.jpg' alt='pic04'>
+            <img src='Images/Gallery05.jpg' alt='pic05'>
+            <img src='Images/Gallery06.jpg' alt='pic06'>
+            <img src='Images/Gallery07.jpg' alt='pic07'>
+            <img src='Images/Gallery08.jpg' alt='pic08'>
+        </div>
+    </div>
+    <!-- End of Gallery -->
+    
+    <!------------------------------------------->
+    
+    <!-- Start of Testimonials -->
+    <div class='testimonial'>
+        
+        <h1>Testimonial</h1>
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="">
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="Images/Person01.jpg" class="">
+              <div class="carousel-caption d-none d-md-block">
+                <i class="fas fa-quote-left"></i>
+                <p>I wanted to thank you very much for planning the trip to France for my girlfriend and me. It was amazing and exceeded my expectations! We had a wonderful time and were very pleased with the accommodations in Paris and Bayeux. Our private/small tour guides were fantastic! I appreciate all the effort to get us to the Eiffel Tower finally.</p>
+                <span>Ann McMillan</span>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="Images/Person02.jpg" class="">
+              <div class="carousel-caption d-none d-md-block">
+                <i class="fas fa-quote-left"></i>
+                <p>I had a marvelous time in our travels to Madagascar, Zimbabwe and Botswana, I had just wonderful experiences.I loved the location of the Gorges Camp as I felt like it was only the time we got to see real and rural Africans and how they truly lived. The service was amazing and everyone was very attentive!</p>
+                <span>Samantha Smith</span>
+              </div>
+            </div>
+            <div class="carousel-item">
+            
+              <img src="Images/Person03.jpg" class="">
+              <div class="carousel-caption d-none d-md-block">
+                <i class="fas fa-quote-left"></i>
+                <p>Just wanted to say many, many thanks for helping me set up an amazing Costa Rican adventure! My nephew and I had a blast! All of the accommodations were perfect as were the activities that we did (canopy, coffee tour, hikes, fishing, and massages!) We have such fond memories and can't thank you enough!</p>
+                <span>Debra Ortega</span>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+    </div> 
+    <!-- End of Testimonials -->
+    
+    <!------------------------------------------->
+            
+    <!-- Start of Footer -->
+    <div class='footer'>
+        <ul class='social'>
+            <li><i class="fab fa-facebook"></i></li>
+            <li><i class="fab fa-whatsapp"></i></li>
+            <li><i class="fab fa-twitter"></i></li>
+            <li><i class="fab fa-instagram"></i></li>
+            <li><i class="fab fa-pinterest"></i></li>
+        </ul>
+        
+        <ul class='menu'>
+            <li><a href='Home.html'>Home</a></li>
+            <li><a href='About.html'>About Us</a></li>
+            <li><a href='Contacts.html'>Contacts</a></li>
+            <li><a href='Booking.html'>Booking</a></li>
+            <li><a href='#'>Policy</a></li>
+            <li><a href='#'>Careers</a></li>
+        </ul>
+        <p>All copy rights &copy2020 are reserved</p>
+    </div>
+    <!-- End of Footer -->
+
+    <i class="fas fa-angle-double-up"></i>
+    
+    <!-- Javascript Libraries -->
+    <script src='JS/Jquery.min.js'></script>
+    <script src='JS/popper.min.js'></script>
+    <script src='JS/bootstrap.min.js'></script>
+    <script src='JS/Main.js'></script>
+    <script src="JS/jquery.nicescroll.min.js"></script>
+</body>
+</html>

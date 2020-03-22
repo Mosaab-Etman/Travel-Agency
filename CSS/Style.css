@@ -1,0 +1,1199 @@
+body {
+    --mainColor: #FFA900;
+    box-sizing: border-box;
+    overflow: hidden
+}
+
+/* --------------------- The Home page ------------------*/
+
+/* Start of upperNavbar */
+
+.upperNavbar{
+    padding: 0px;
+    position: fixed;
+    z-index: 10;
+    width: 100%; height: 65px;
+    background-color: rgba(222, 222, 221, 0.5);
+    box-shadow: 0px 2px 8px #525151;
+}
+
+.upperNavbar nav{padding: 0px;}
+
+.upperNavbar .logo{
+    font-size: 25px;
+    color: var(--mainColor);
+}
+
+.upperNavbar .navbar-brand {
+    margin-left: 5px;
+    padding: 0px;   
+    font-size: 30px;
+    font-family: 'Playball' ;
+}
+
+.upperNavbar .navbar-brand::first-letter{color: var(--mainColor);}
+
+.upperNavbar .nav-item .nav-link{
+    color: black;
+    font-weight: 500;
+    font-size: 22px;
+    padding: 15px 20px;
+    transition: all .5s ease
+}
+
+.upperNavbar ul .active a{color: var(--mainColor)!important;}
+
+.upperNavbar .nav-item .Bborder {
+    height: 2px;
+    display: block;
+    width: 0px;
+    background-color: var(--mainColor);
+    margin: auto;
+    transition: all 0.5s ease  
+}
+
+.upperNavbar ul .active .Bborder{width: 70px}
+
+.upperNavbar .nav-item:hover .nav-link{color: var(--mainColor);}
+
+.upperNavbar .nav-item:hover .Bborder{width: 70px;}
+
+@media (max-width: 1089px) {
+    .upperNavbar .nav-item .Bborder {
+        margin-left: 10px
+    }
+    .upperNavbar .navbar .show {
+        background-color: #dededbf0;
+        border-radius: 0px 0px 20px 20px;
+        margin-top: 20px;
+    }
+}
+
+/* --------------------------------------------------*/
+
+/* Start of Banner */
+
+/* First: Carousal */
+
+.banner {position: relative}
+
+.banner .carousel-inner {height: 650px}
+
+.banner .carousel-inner .overlay {
+    position: absolute;
+    top: 0px; left: 0px;
+    z-index: 2;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.4)
+}
+
+.banner .carousel-inner .carousel-item, img {height: 100%}
+
+.banner .carousel-inner .carousel-item .text {
+    position: absolute;
+    top: 30%; left: 5%;
+    width: 35%;
+    color: white;
+    z-index: 3;
+    font-family: monospace
+}
+
+.banner .carousel-inner .text h1 {font-size: 26px}
+
+.banner .carousel-inner .text h1::after{
+    content: '';
+    width: 100px; height: 1px;
+    display: block;
+    margin-top: 10px;
+    background-color: var(--mainColor);
+}
+
+.banner .carousel-inner .text p {
+    font-size: 18px;
+    text-align: justify;
+
+}
+
+.banner .carousel-inner .text button {
+    padding: 10px;
+    margin-top: 40px;
+    width: 150px;
+    font-size: 18px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid #FFA900;
+    border-radius: 20px;
+    transition: all 0.5s ease
+}
+
+.banner .carousel-inner .text button:hover {
+    background-color: var(--mainColor)
+}
+
+.banner .carousel .carousel-indicators{
+    bottom: 40px;
+    justify-content: left;
+    margin-left: 5%
+}
+
+.banner .carousel .carousel-indicators li {
+    height: 15px; width: 15px;
+    border-radius: 50%;
+    color: white
+}
+
+.banner .carousel .carousel-indicators .active{
+    background-color: var(--mainColor)
+}
+
+/* Second: Form */
+
+.banner form {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    z-index: 6;
+    width: 35%;
+    background-color: #ffffffa6;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.banner form label {
+    font-size: 13px;
+    margin: 15px 5px 5px;
+    display: inline-block
+}
+
+.banner form > input {
+    display: block;
+    width: 100%;
+    height: 50px; padding: 20px;
+    border-radius: 50px;
+    border: none;
+    outline: none
+}
+
+.banner form div {
+    width: 48%;
+    display: inline-block;
+}
+
+.banner form  div:nth-of-type(odd) {margin-right: 2%}
+
+.banner form div input {
+    width: 100%;
+    height: 50px; padding: 20px;
+    border-radius: 50px;
+    border: none;
+    outline: none
+}
+
+.banner form input:hover{border: 1px solid var(--mainColor)}
+
+.banner form button {
+    margin-top: 15px;
+    height: 50px;
+    width: 100%;
+    border: none;
+    color: white;
+    border-radius: 50px;
+    background-color: var(--mainColor);
+    transition: all 0.5s ease
+}
+
+.banner form button:hover {
+    background-color: #c78503;
+    color: black;
+    cursor: pointer
+}
+
+/* Media query of Banner */
+
+@media (max-width: 922px) {
+    .banner .carousel-inner .text{
+        display: none
+    }
+    
+    .banner form {
+        width: 70% !important
+    }
+    
+}
+
+@media (max-width: 1230px) {
+    .banner .carousel .carousel-indicators {
+        display: block;
+        margin-left: 1%;
+        bottom: 25%;
+    }
+    
+    .banner .carousel-indicators li {
+        margin-bottom: 10px;
+        border: none
+    }
+}
+
+/* -------------------------------------------------------- */
+
+/* Start of Tours */
+
+.mainTours h1 {
+    text-align: center;
+    margin: 80px auto;
+}
+
+.mainTours h1::after{
+    content: '';
+    width: 60px;
+    height: 1px;
+    display: block;
+    margin: 10px auto;
+    background-color: var(--mainColor)
+}
+
+.tourCard {margin-bottom: 40px}
+
+.tourCard:hover .cardContent .detailsCard {margin-top: 0px}
+
+.tourCard:hover .offer {display: none}
+
+.cardContent {
+    position: relative;
+    overflow: hidden;
+    height: 80%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 5px 5px 10px;
+}
+
+.cardContent .offer{
+    position: absolute;
+    z-index: 2;
+    left: 5%;
+    top: 0px;
+    width: 50px;
+    height: 60px;
+    background-color: var(--mainColor);
+    font-weight: bold;
+    font-size: 15px;
+    padding: 20px 0px 0px 5px;
+}
+
+.cardContent .offer::before {
+    content: '';
+    position: absolute;
+    z-index: 5;
+    left: 0px;
+    bottom: -15px;
+    width: 0px;
+    height: 0px;
+    border: 10px 10px 0px 0px;
+    border-width: 15px 25px 0px 0px;
+    border-style: solid;
+    border-color: orange transparent transparent transparent;
+    
+}
+
+.cardContent .offer::after {
+    content: '';
+    position: absolute;
+    z-index: 5;
+    right: 0px;
+    bottom: -15px;
+    width: 0px;
+    height: 0px;
+    border-width: 15px 0px 0px 25px;
+    border-style: solid;
+    border-color: orange transparent transparent transparent;
+    
+}
+
+.tourCard img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all .5s ease
+}
+
+.tourCard > span:first-of-type {float: left}
+
+.tourCard > span:last-of-type {
+    float: right;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: var(--mainColor);
+    padding: 3px;
+    border-radius: 5px;
+    color: #585858;
+    overflow: hidden
+}
+
+.tourCard .cardContent .detailsCard {
+    position: absolute;
+    z-index: 3;
+    top: 0px;
+    width: 100%; height: 100%;
+    margin-top: -200px;
+    padding: 15px;
+    color: black;
+    background-color: rgba(255, 169, 0, 0.4);
+    line-height: 14px;
+    border-radius: 10px;
+    transition: all 0.8s ease
+}
+
+.tourCard .detailsCard p {font-weight: bold}
+
+.tourCard .detailsCard span {font-weight: lighter;}
+
+.tourCard .detailsCard button{
+    display: block;
+    margin: 50px auto 0px;
+}
+
+@media (max-width: 768px) {
+    .tourCard .cardContent .detailsCard {
+        margin-top: -277px
+    }
+}
+
+/* ------------------------------------------------------------ */
+
+/* Start of Services */
+
+.services {
+    background-color: #f5f5f5;
+    padding: 30px 0px;
+}
+
+.services hr {background-color: var(--mainColor)}
+
+.serviceCard {
+    border-radius: 10px;
+    border: 1px solid #dcd9d9;
+    color: #585757;
+    margin: 30px 4%;
+    text-align: center;
+    transition: all .5s ease
+}
+
+.serviceCard i {
+    font-size: 35px;
+    margin: 30px 0px 20px;
+    color: var(--mainColor);
+}
+
+.serviceCard hr{
+    width: 100px;
+    margin: 15px auto;
+}
+
+.serviceCard:hover {
+    background-color: white;
+    border-color: white
+}
+
+/* ------------------------------------------------------------ */
+
+/* Start of Gallery */
+
+.gallery {
+    background-color: #e9eaea;
+    padding: 20px 0px;
+}
+    
+.gallery h1 {
+    text-align: center;
+    font-family: 'Playball';
+    font-size: 45px;
+    display: block;  
+}
+
+.gallery h1::after {
+    content: '';
+    width: 100px;
+    height: 1px;
+    display: block;
+    margin: auto;
+    background-color: var(--mainColor)
+}
+
+.gallery .mainPic {
+    position: relative;
+    width: 60%;
+    margin: 20px auto;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 5px solid var(--mainColor);
+}
+
+.gallery .mainPic img {width: 100%;}
+
+.gallery .mainPic i {
+    position: absolute;
+    top: 45%;
+    font-size: 30px; padding: 10px;
+    background-color: var(--mainColor);
+    opacity: .6;
+    transition: all .5s ease
+}
+
+.gallery .mainPic .fa-caret-right {
+    right: 0px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.gallery .mainPic .fa-caret-left {
+    left: 0px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.gallery .mainPic i:hover {
+    cursor: pointer;
+    opacity: 1
+}
+
+.gallery .thumbnails {
+    display: flex;
+    overflow: hidden;
+    border-top: 2px dashed black;
+    border-bottom: 2px dashed black
+}
+
+.gallery .thumbnails img {
+    width: 224px;
+    margin-right: 1px;
+    opacity: 0.6;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all .5s ease
+}
+
+.gallery .thumbnails img:hover {border: 3px solid var(--mainColor);}
+
+.gallery .thumbnails .active {
+    border: 3px solid var(--mainColor);
+    opacity: 1
+}
+
+@media (max-width: 768px) {
+    .gallery .mainPic i {transform: scale(0.7);}
+    .gallery h1 {font-size: 30px}
+}
+
+/* ------------------------------------------------------------ */
+
+/* Start of Testimonial */
+
+.testimonial {
+    background-image: url(../Images/Testimonial.jpg);
+    background-attachment: fixed;
+    background-position: bottom;
+    height: 500px
+}
+
+.testimonial h1{
+    margin: 0px;
+    padding: 50px 0px;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.testimonial h1::after {
+    content: '';
+    display: block;
+    margin: 15px auto;
+    width: 100px;
+    height: 1px;
+    background-color: var(--mainColor)
+}
+
+.testimonial .carousel-item {padding-left: 15%}
+
+.testimonial .carousel-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 3%;
+}
+
+.testimonial .carousel-item i {
+    float: left;
+    font-size: 50px;
+    color: var(--mainColor);
+}
+
+.testimonial .carousel-item p{
+    font-size: 20px;
+    font-weight: 600
+}
+
+.testimonial .carousel-item span {
+    float: left;
+    font-size: 25px;
+    color: var(--mainColor);
+}
+
+.testimonial .carousel-item .carousel-caption{
+    position: static;
+    width: 80%;
+    color: black
+}
+
+.testimonial a {
+    background-color: var(--mainColor);
+    height: 50px;
+    width: 50px;
+    top: 35%;
+    border-radius: 50%;
+}
+
+.testimonial .carousel-control-prev {left: 5%}
+
+.testimonial .carousel-control-next {right: 5%}
+
+@media (max-width: 790px) {
+    .testimonial{display: none}
+}
+
+@media (max-width: 1130px) {
+    .testimonial .carousel-item img {
+        width: 150px; height: 150px
+    }
+}
+
+
+
+/* ------------------------------------------------------------ */
+
+/* Start of Footer */
+
+.footer {background-color: #3a3939;}
+
+.footer ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding-top: 20px;
+    margin: 0px
+}
+
+.footer .social i {
+    font-size: 25px;
+    color: #c7c4c4;
+    transition: all 0.5s ease;
+    cursor: pointer
+}
+
+.social .fa-facebook:hover {color: #1877f2}
+.social .fa-whatsapp:hover {color: #25d366}
+.social .fa-twitter:hover {color: #1da1f2}
+.social .fa-instagram:hover {color: #c32aa3}
+.social .fa-pinterest:hover {color: #bd081c}
+
+.footer ul li {margin: 0px 10px}
+
+.footer .menu li:not(:last-child) {
+    border-right: 1px solid var(--mainColor);
+    padding-right: 15px;
+}
+
+.footer ul a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s ease
+}
+
+.footer .menu li:hover a {color: var(--mainColor)}
+
+.footer p {
+    margin: 0px; padding: 20px 0px 10px;
+    text-align: center;
+    color: white
+}
+
+@media (max-width: 600px) {
+    .footer .menu li {
+        font-size: .8em;
+    } 
+    
+}
+
+/* --------------------- The About page ------------------*/
+
+/* Start of poster and About */
+
+.poster {
+    background-image: url(../Images/Poster.jpg);
+    background-repeat: no-repeat; background-size: cover;
+    width: 100%; height: 500px;
+    display: flex; align-items: center;
+    justify-content: center
+}
+
+.poster h1{
+    font-size: 50px;
+    padding: 20px 0px;
+    text-transform: uppercase;
+    font-family: 'playball';
+    border-bottom: 3px solid var(--mainColor);
+    border-top: 3px solid var(--mainColor)
+}
+
+.About {
+    padding: 50px 0px
+}
+
+.About .content {
+    margin-left: 7%
+}
+
+.About img {
+    box-shadow: 5px 5px 5px #6f6e6e;
+    padding: 0px;
+}
+
+.About h2::after {
+    content: '';
+    width: 100px; height: 1px;
+    display: block;
+    background-color: var(--mainColor);
+    margin: 10px 0px
+}
+
+@media (max-width: 786px) {
+    .poster h1 {
+        font-size: 2.5em;
+    }
+}
+
+/* -----------------------------------------------------*/
+
+/* Start of timeline */
+
+.Timeline {
+    background-color: #2d2c2c;
+    padding: 30px 0px;
+    color: white
+}
+
+.Timeline h1 {text-align: center}
+
+.Timeline h1::after {
+    content: '';
+    width: 100px; height: 1px;
+    display: block;
+    background-color: var(--mainColor);
+    margin: 10px auto   
+}
+
+.Timeline p {
+    margin-bottom: 80px;
+    text-align: justify
+}
+
+.Timeline .story > span {
+    text-align: center;
+    padding-top: 20px;
+    border-right: 2px solid var(--mainColor);
+}
+
+.Timeline .story > span::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-color: gray;
+    border-radius: 50%;
+    border: 2px solid orange;
+    display: inline-block;
+    position: absolute;
+    right: -8px;
+    top: 10%;
+    z-index: 2;
+}
+
+.Timeline .story p {
+    padding: 10px 100px 0px 30px;
+    margin: 0px;
+    color: #a7a5a5;
+    opacity: 0
+}
+
+.Timeline .story p span {
+    color: white;
+    font-weight: 500
+}
+
+.Timeline .story img {
+    padding: 10px;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .Timeline .story span{
+        border: none;
+    } 
+    
+    .Timeline .story > span::after {
+        display: none
+    }
+    
+    .Timeline .story > span {
+        text-align: left
+    }
+}
+
+@media (max-width: 992px) {
+    .Timeline .story p{
+    padding: 10px 30px 0px 20px;
+    } 
+}
+
+/* -----------------------------------------------------*/
+
+/* Start of dashboard */
+
+.dashboard h1 {
+    text-align: center;
+    padding: 50px 0px 20px;
+    margin: 0px;
+}
+
+.dashboard .stars {
+    list-style: none;
+    text-align: center
+}
+
+.dashboard .stars li {
+    margin-right: 10px;
+    display: inline-block;
+    color: var(--mainColor)
+}
+
+.dashboard .stars::after {
+    content: ''; 
+    width: 70px; height: 2px;
+    background-color: var(--mainColor);
+    display: block; margin: 10px auto
+}
+
+.dashboard .member {
+    background-color: #e0dddd;
+    margin: 4%;
+    padding: 20px 0px 0px;
+    border-radius: 20px;
+    overflow: hidden
+}
+
+.dashboard .member img {
+    width: 70%;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+    box-shadow: 7px -7px 0px;
+}
+
+.dashboard .member:nth-of-type(1) img {box-shadow: 7px -7px #4F895C}
+.dashboard .member:nth-of-type(2) img {box-shadow: 7px -7px #DE9B21}
+.dashboard .member:nth-of-type(3) img {box-shadow: 7px -7px #4b90b9}
+.dashboard .member:nth-of-type(4) img {box-shadow: 7px -7px #FF7D94}
+.dashboard .member:nth-of-type(5) img {box-shadow: 7px -7px #8cab0f}
+.dashboard .member:nth-of-type(6) img {box-shadow: 7px -7px #BF337A}
+
+.dashboard .member h5 {
+    text-align: center;
+    margin: 10px 0px
+}
+
+.dashboard .member:nth-of-type(1) h5 {color: #4F895C}
+.dashboard .member:nth-of-type(2) h5 {color: #DE9B21}
+.dashboard .member:nth-of-type(3) h5 {color: #4b90b9}
+.dashboard .member:nth-of-type(4) h5 {color: #FF7D94}
+.dashboard .member:nth-of-type(5) h5 {color: #8cab0f}
+.dashboard .member:nth-of-type(6) h5 {color: #BF337A}
+
+.dashboard .member p {text-align: center}
+
+.dashboard .member .social {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 15px 0px;
+    background-image: linear-gradient(#cccaca, #737272);
+}
+
+.dashboard .member .social i {
+    font-size: 25px;
+    margin-right: 10px;
+    cursor: pointer
+}
+
+.dashboard .social .fa-facebook {color: #3b5999}
+.dashboard .social .fa-linkedin {color: #0077B5}
+.dashboard .social .fa-twitter {color: #55acee}
+
+@media (max-width: 576px) {
+    .dashboard .member {margin: 15px 20%}
+    .dashboard .member img {width: 50%}
+}
+
+/* ----------------------- Contacts Page-----------------------*/
+
+/* Start of Contacts */
+
+.contacts {margin: 60px 0px}
+
+.contacts .contactCard {
+    text-align: center;
+    padding: 10px 10px 0px
+}
+
+.contacts .contactCard:not(:last-child) {
+    border-right: 1px solid #adabab;  
+}
+
+.contacts .contactCard i {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: orange;
+}
+
+@media (max-width: 768px) {
+    .contacts .contactCard:not(:last-child) {border: none}
+    .poster h1 {
+        font-size: 2.5em;
+    }  
+}
+
+
+/* ---------------------------------------------------*/
+
+/* Start of reach */
+
+.reach {background-color: #d4d4d4}
+
+.reach form {padding: 30px 20px}
+
+.reach form h1::after {
+    content: '';
+    width: 100px; height: 1px;
+    background-color: var(--mainColor);
+    display: block; margin: 10px 0px
+}
+
+.reach form div {position: relative}
+
+.reach form div:not(:last-of-type) {
+    display: inline-block;
+    width: 49%;
+    margin: 2% 0px;
+}
+
+.reach form label {
+    display: block;
+    font-size: 13px;
+    margin-left: 10px
+}
+
+.reach form input {
+    width: 90%; height: 50px;
+    border-radius: 25px;
+    border: 1px solid #b9b7b7; 
+    outline: none;
+    padding: 0px 10px;
+}
+
+.reach form textarea {
+    width: 95%;
+    height: 100px;
+    border-radius: 20px;
+    padding: 10px; outline: none
+}
+
+.reach form input:hover {border-color: var(--mainColor)}
+.reach form textarea:hover {border-color: var(--mainColor)}
+
+.reach form button {
+    display: block;
+    width: 50%;
+    height: 50px;
+    border-radius: 30px;
+    border: none; outline: none;
+    background-color: var(--mainColor);
+    margin: 30px 0px;
+    transition: all 0.5s ease
+}
+
+.reach form button:hover {
+    color:white;
+    background-color: darkorange
+}
+
+.reach .map {padding: 20px}
+
+.reach .map iframe {
+    width: 100%; height: 100%;
+    border: none; border-radius: 10px;
+    box-shadow: -5px -5px 10px gray;
+}
+
+.warn {
+    position: absolute;
+    top: 0px;
+    right: 15%;
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+
+/* --------------------- The Booking page ------------------*/
+
+/* Start of BookSlider */
+
+.BookSlider {position: relative}
+
+/* ----------------------------------------------- */
+
+/* Start of application */
+
+.booking {
+    position: absolute;
+    bottom: 25%; left: 5%;
+    width: 90%; height: 168px;
+    z-index: 3;
+    background-color: #E1E1E1;
+}
+
+.booking .application {
+    padding: 20px;
+    margin: 0px
+}
+
+.booking .type {
+    display: flex;
+    margin: -44px 0px 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.booking .type li {
+    padding: 10px 0px; 
+    background-color: #cecece;
+    width: 115px;
+    text-align: center; 
+    font-weight: 500;
+    transition: all 1s ease;
+    cursor: pointer
+}
+
+.booking .type li:hover{background-color: var(--mainColor)}
+
+.booking .type .active{background-image: linear-gradient(#f7c563, #ffa900)}
+
+.booking .flights {display: none}
+
+.booking .place, .time {border-right: 1px solid gray;}
+
+.booking h6 span {
+    font-weight: bold;
+    color: var(--mainColor)
+}
+
+.booking label {font-size: 13px}
+
+.booking input {
+    width: 100%;
+    border-radius: 40px;
+    outline: none;
+    border: 1px solid #c3c2c2;
+    padding: 5px;
+    height: 35px;
+    font-size: 13px;
+}
+
+.booking input:hover {border-color: var(--mainColor)}
+
+.booking button {
+    position: absolute;
+    bottom: 0px; left: 45%;
+    padding: 9px;
+    border-radius: 10px 10px 0px 0px;
+    border: none; outline: none;
+    width: 150px;
+    font-weight: 500;
+    background-image: linear-gradient(#f7c563, #ffa900);
+}
+
+@media (max-width: 767px) {
+    .booking {
+        position: static;
+        height: auto; margin: auto;
+        width: 75%
+    }
+    .booking .place, .time {border: none}
+    .booking button {
+        position: static;
+        margin: auto;
+        display: block
+    }
+    .booking .type {margin: 0px}
+    .booking > div > div {margin-bottom: 25px}
+
+}
+
+/* ----------------------------------------------- */
+
+/* Start of Receipt */
+
+.receipt {
+    position: absolute;
+    left: 5%; bottom: 0px;
+    z-index: 3;
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+    background-color: #e1e1e1;
+    margin: 0px;
+    align-items: center;
+    display: none
+}
+
+.receipt h3::after {
+    content: '';
+    width: 70px; height: 1px;
+    background-color: var(--mainColor);
+    display: block;
+    margin: 10px auto
+}
+
+.receipt .price {
+    border: 1px solid var(--mainColor);
+    border-width: 0px 1px
+}
+
+.receipt .price span, i {
+    font-size: 25px
+}
+
+.receipt .payment ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px 0px; 
+}
+
+.receipt .payment ul li {
+    margin: 0px 8px;
+    width: 20%;
+}
+
+.receipt .payment ul li i {
+    display: block;
+    font-size: 20px
+}
+
+.receipt button {
+    width: 110px;
+    padding: 8px;
+    margin: 5px;
+    border: none; outline: none;
+    background-image: linear-gradient(#f7c462, #fea901);
+}
+
+@media (max-width: 767px) {
+    .receipt {
+        position: static; width: 75%;
+        margin: 20px auto
+    }
+    .receipt > div {margin: 25px 0px}
+}
+
+/* ----------------------------------------------- */
+
+/* Start of Policy */
+
+.details {
+    background-image: radial-gradient(#383838, #1b1b1b);
+    padding: 30px 0px;
+    color: white;
+    display: none
+}
+
+.details h3 {
+    padding: 20px 0px;
+    text-align: center;
+    font-family: sans-serif
+}
+
+.details h3::after {
+    content: '';
+    width: 50px; height: 1px;
+    background-color: var(--mainColor);
+    display: block;
+    margin: 10px auto
+}
+
+.receipt-details {border-right: 1px solid var(--mainColor)}
+
+.details ul {list-style: none}
+
+.details ul li::before {
+    content: '*';
+    color: var(--mainColor);
+    margin-right: 5px
+}
+
+@media (max-width: 767px) {
+    .receipt-details{
+        border-right: none;
+        border-bottom: 1px solid var(--mainColor)
+    }
+}
+
+
+/* --------------------fixed objects------------------------- */
+
+/* ScrollingUp Arrow */
+
+.fa-angle-double-up{
+    position: fixed;
+    bottom: 30px;
+    left: 20px;
+    font-size: 40px;
+    color: var(--mainColor);
+    background-color: #5f5d5d;
+    padding: 5px 13px;
+    border-radius: 50%;
+    display: none
+}
+
+.fa-angle-double-up:hover {
+    cursor: pointer;
+    color: #5f5d5d;
+    background-color: var(--mainColor)
+}
+
+
+
+
+
+   
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
