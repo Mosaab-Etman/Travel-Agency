@@ -58,6 +58,8 @@ $(document).ready(function() {
     
     // Resizing the thumnails
     
+    $('.thumbnails img').width($(window).width() / 6)
+    
     $(window).on('resize', function() {
         
         $('.thumbnails img').width($(window).width() / 6);

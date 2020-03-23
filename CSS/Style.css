@@ -462,7 +462,6 @@ body {
 }
 
 .gallery .thumbnails img {
-    width: 224px;
     margin-right: 1px;
     opacity: 0.6;
     border-radius: 10px;
